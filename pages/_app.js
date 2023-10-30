@@ -1,4 +1,4 @@
-import { ThirdwebProvider, ThirdwebSDKProvider } from "@thirdweb-dev/react";
+import { ThirdwebProvider } from "@thirdweb-dev/react";
 import '../styles/globals.css';
 
 const activeChain = {
@@ -18,14 +18,12 @@ const activeChain = {
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ThirdwebSDKProvider activeChain={activeChain}>
-      <ThirdwebProvider
-        activeChain={activeChain}
-        clientId={process.env.NEXT_PUBLIC_TEMPLATE_CLIENT_ID}
-      >
-        <Component {...pageProps} />
-      </ThirdwebProvider>
-    </ThirdwebSDKProvider>
+    <ThirdwebProvider
+      activeChain={activeChain}
+      clientId={process.env.NEXT_PUBLIC_TEMPLATE_CLIENT_ID}
+    >
+      <Component {...pageProps} />
+    </ThirdwebProvider>
   );
 }
 
