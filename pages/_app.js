@@ -1,5 +1,5 @@
 import { ThirdwebProvider } from "@thirdweb-dev/react";
-import '../styles/globals.css';
+import "../styles/globals.css";
 
 const activeChain = {
   chainId: 9398423,
