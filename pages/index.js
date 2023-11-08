@@ -7,19 +7,21 @@ export default function Home() {
   const count = 20;
 
   const { contract } = useContract(NFT_CONTRACT_ADDRESS);
-  const { data: nfts } = useNFTs(
+  const { data: nfts, isLoading: isLoadingNFTs } = useNFTs(
     contract,
     {
       count: count,
-    }
+    }  
   )
 
   return (
     <div className={styles.container}>
       <div className={styles.NFTGrid}>
-        {nfts.map((nft, index) => (
+      {!isLoadingNFTs && (
+        nfts.map((nft, index) => (
           <NFTCard key={index} nft={nft} />
-        )}
+        )
+      ))}
       </div>
     </div>
   );
