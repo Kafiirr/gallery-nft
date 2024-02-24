@@ -2,18 +2,18 @@ import { ThirdwebProvider } from "@thirdweb-dev/react";
 import "../styles/globals.css";
 
 const activeChain = {
-  chainId: 9398423,
-  rpc: ["https://froopyland.dymension.xyz/5/kafirdym_9398423-1/evmrpc"],
+  chainId: 5,
+  rpc: ["https://goerli.infura.io/v3/"],
   nativeCurrency: {
     decimals: 18,
-    name: "KafirChain",
-    symbol: "KFR",
+    name: "Goerli",
+    symbol: "ETH",
   },
-  shortName: "KFR",
-  slug: "KafirChain",
+  shortName: "GETH",
+  slug: "Goerli",
   testnet: true,
-  chain: "KafirChain",
-  name: "KafirChain Testnet",
+  chain: "Goerli",
+  name: "Goerli",
 };
 
 function MyApp({ Component, pageProps }) {
